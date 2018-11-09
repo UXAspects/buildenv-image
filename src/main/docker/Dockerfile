@@ -25,7 +25,14 @@ FROM rh7-artifactory.svs.hpeswlab.net:8443/sepg/maven-sepg-saas-image:1.0.0-SNAP
 RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
     apt-get install -y nodejs && \
     echo "Node.js version: $(node -v)" && \
-    echo "NPM version: $(npm -v)"
+    echo "NPM version: $(npm -v)" && \
+    mkdir /ux-aspects-scripts && \
+    ( \
+        cd /ux-aspects-scripts && \
+        npm init --force --yes && \
+        npm install @ux-aspects/ux-aspects-scripts \
+    ) && \
+    ln -s /ux-aspects-scripts/node_modules/\@ux-aspects/ux-aspects-scripts/bin/npm-reversion.js /usr/bin/npm-reversion
 
 #
 # Tag the image
