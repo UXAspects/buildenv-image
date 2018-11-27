@@ -22,7 +22,7 @@ FROM rh7-artifactory.svs.hpeswlab.net:8444/sepg/maven-jdk8-sepg:1.1.0-40
 #
 # Install Node.js 8.x (which includes npm)
 #
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install -y nodejs && \
     echo "Node.js version: $(node -v)" && \
     echo "NPM version: $(npm -v)"
