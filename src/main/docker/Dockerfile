@@ -15,9 +15,9 @@
 #
 
 #
-# Base on the standard image provided by the Release Engineering team
+# Base on the standard Maven 3.5.3 image
 #
-FROM rh7-artifactory.svs.hpeswlab.net:8444/sepg/maven-jdk8-sepg:1.1.0-40
+FROM maven:3.5.3-jdk-8
 
 #
 # Install Node.js 8.x (which includes npm)
