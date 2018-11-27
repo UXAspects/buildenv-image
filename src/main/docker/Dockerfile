@@ -17,7 +17,7 @@
 #
 # Base on the standard image provided by the Release Engineering team
 #
-FROM rh7-artifactory.svs.hpeswlab.net:8443/sepg/maven-sepg-saas-image:1.0.0-SNAPSHOT
+FROM rh7-artifactory.svs.hpeswlab.net:8444/sepg/maven-jdk8-sepg:1.1.0-40
 
 #
 # Install Node.js 8.x (which includes npm)
