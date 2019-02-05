@@ -28,6 +28,12 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     echo "NPM version: $(npm -v)"
 
 #
+# Install Chrome (Required for automated tests)
+#
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+
+#
 # Tag the image
 #
 ARG BUILD_NUMBER
