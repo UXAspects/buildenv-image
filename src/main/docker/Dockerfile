@@ -20,9 +20,9 @@
 FROM maven:3.5.3-jdk-8
 
 #
-# Install Node.js 10.x (which includes npm)
+# Install Node.js 8.x (which includes npm)
 #
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install -y nodejs && \
     echo "Node.js version: $(node -v)" && \
     echo "NPM version: $(npm -v)"
