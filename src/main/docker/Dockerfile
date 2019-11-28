@@ -27,6 +27,8 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     echo "Node.js version: $(node -v)" && \
     echo "NPM version: $(npm -v)"
 
+RUN npm install npm@latest -g
+
 #
 # Install Chrome (Required for automated tests)
 #
