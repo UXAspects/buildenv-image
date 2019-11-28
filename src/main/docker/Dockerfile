@@ -24,9 +24,9 @@ FROM maven:3.5.3-jdk-8
 #
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get install -y nodejs && \
-    echo "Node.js version: $(node -v)"
-
-RUN npm install npm@latest -g && echo "NPM version: $(npm -v)"
+    echo "Node.js version: $(node -v)" && \
+    npm install npm@latest -g && \
+    echo "NPM version: $(npm -v)"
 
 #
 # Install Chrome (Required for automated tests)
