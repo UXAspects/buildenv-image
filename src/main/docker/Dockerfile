@@ -31,8 +31,8 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
 #
 # Install Chrome (Required for automated tests)
 #
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+RUN wget http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_83.0.4103.97-1_amd64.deb
+RUN dpkg -i google-chrome-stable_83.0.4103.97-1_amd64.deb; apt-get -fy install
 
 #
 # Tag the image
