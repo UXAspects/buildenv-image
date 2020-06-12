@@ -1,7 +1,5 @@
-!not-ready-for-release!
-
 #### Version Number
-${version-number}
+* Update `google-chrome`.
 
 #### New Features
 
