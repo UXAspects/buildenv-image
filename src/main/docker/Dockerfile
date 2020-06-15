@@ -35,6 +35,11 @@ RUN wget http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/
 RUN dpkg -i google-chrome-stable_83.0.4103.97-1_amd64.deb; apt-get -fy install
 
 #
+# Fetch chromedriver to save a download on every build
+#
+RUN curl https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_linux64.zip --create-dirs -o /tmp
+
+#
 # Tag the image
 #
 ARG BUILD_NUMBER
