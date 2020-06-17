@@ -23,7 +23,7 @@
 
     <groupId>com.github.uxaspects</groupId>
     <artifactId>buildenv-image</artifactId>
-    <version>1.4.0-SNAPSHOT</version>
+    <version>1.4.0-210</version>
     <packaging>pom</packaging>
 
     <name>UXAspects Build Environment Image</name>
