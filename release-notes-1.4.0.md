@@ -1,6 +1,7 @@
 #### Version Number
-* Update `google-chrome`.
+${version-number}
 
 #### New Features
+* Update `google-chrome` to version 83.
 
 #### Known Issues
