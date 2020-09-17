@@ -22,11 +22,17 @@ FROM maven:3.5.3-jdk-8
 #
 # Install Node.js (which includes npm)
 #
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get install -y nodejs && \
     echo "Node.js version: $(node -v)" && \
     npm install npm@latest -g && \
     echo "NPM version: $(npm -v)"
+
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | \
+    apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | \
+    tee /etc/apt/sources.list.d/yarn.list && \
+    apt update && apt install yarn
 
 #
 # Install Chrome (Required for automated tests)
