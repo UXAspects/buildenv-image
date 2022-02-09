@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+#
 # Base on the standard Maven 3.8.4 image
 #
 FROM maven:3.8.4-jdk-11
