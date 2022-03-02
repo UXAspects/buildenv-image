@@ -1,5 +1,5 @@
 #
-# Copyright 2021 Micro Focus or one of its affiliates.
+# Copyright 2022 Micro Focus or one of its affiliates.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,10 +22,10 @@ FROM maven:3.5.3-jdk-8
 #
 # Install Node.js (which includes npm)
 #
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get install -y nodejs && \
     echo "Node.js version: $(node -v)" && \
-    npm install npm@6 -g && \
+    npm install npm -g && \
     echo "NPM version: $(npm -v)"
 
 #
