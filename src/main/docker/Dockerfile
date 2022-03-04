@@ -15,9 +15,9 @@
 #
 
 #
-# Base on the standard Maven 3.5.3 image
+# Base on the JDK 11 image
 #
-FROM maven:3.5.3-jdk-8
+FROM cafapi/buildenv-jdk11:1.0.0
 
 #
 # Install Node.js (which includes npm)
