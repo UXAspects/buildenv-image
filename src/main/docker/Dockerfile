@@ -35,6 +35,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
 # https://stackoverflow.com/questions/70752674/404-on-dl-google-com-for-stable-chrome
 RUN wget http://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_83.0.4103.97-1_amd64.deb
 RUN dpkg -i google-chrome-stable_83.0.4103.97-1_amd64.deb; apt-get -fy install
+ENV CHROME_BIN='/usr/bin/google-chrome'
 
 #
 # Fetch chromedriver to save a download on every build
