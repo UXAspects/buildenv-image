@@ -33,13 +33,13 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
 #
 # Note: Google has phased out fetching a specific version of Chrome, which is why we're fetching from a mirror:
 # https://stackoverflow.com/questions/70752674/404-on-dl-google-com-for-stable-chrome
-RUN wget http://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_99.0.4844.51-1_amd64.deb
-RUN apt install -y ./google-chrome-stable_99.0.4844.51-1_amd64.deb
+RUN wget http://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_98.0.4758.102-1_amd64.deb
+RUN apt install -y ./google-chrome-stable_98.0.4758.102-1_amd64.deb
 
 #
 # Fetch chromedriver to save a download on every build
 #
-RUN curl https://chromedriver.storage.googleapis.com/99.0.4844.35/chromedriver_linux64.zip --create-dirs -o /tmp/chromedriver_linux64.zip
+RUN curl https://chromedriver.storage.googleapis.com/98.0.4758.102/chromedriver_linux64.zip --create-dirs -o /tmp/chromedriver_linux64.zip
 
 #
 # Install Cypress Dependencies
