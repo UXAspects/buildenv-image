@@ -22,10 +22,10 @@ FROM maven:3.8.4-jdk-11
 #
 # Install Node.js (which includes npm)
 #
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y nodejs && \
     echo "Node.js version: $(node -v)" && \
-    npm install npm -g && \
+    npm install npm@9 -g && \
     echo "NPM version: $(npm -v)"
 
 #
