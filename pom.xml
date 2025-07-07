@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2018-2023 Open Text.
+    Copyright 2018-2025 Open Text.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@
 
     <groupId>com.github.uxaspects</groupId>
     <artifactId>buildenv-image</artifactId>
-    <version>4.2.0-SNAPSHOT</version>
+    <version>5.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>UXAspects Build Environment Image</name>
@@ -74,7 +74,7 @@
     </developers>
 
     <properties>
-        <copyrightYear>2023</copyrightYear>
+        <copyrightYear>2025</copyrightYear>
         <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Open Text.</copyrightNotice>
         <dockerHubOrganization>uxaspects</dockerHubOrganization>
         <dockerUXAspectsOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerUXAspectsOrg>
@@ -88,7 +88,7 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.27.2</version>
+                <version>0.46.0</version>
                 <executions>
                     <execution>
                         <id>docker-build</id>

@@ -1,5 +1,5 @@
 #
-# Copyright 2018-2023 Open Text.
+# Copyright 2022-2025 Open Text.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,10 +22,11 @@ FROM maven:3.8.4-jdk-11
 #
 # Install Node.js (which includes npm)
 #
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - && \
     apt-get install -y nodejs && \
     echo "Node.js version: $(node -v)" && \
-    npm install npm@10.1.0 -g && \
+    npm install npm@latest -g && \
+    npm install --global corepack@latest && \
     echo "NPM version: $(npm -v)"
 
 #
