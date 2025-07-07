@@ -25,7 +25,8 @@ FROM maven:3.8.4-jdk-11
 RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - && \
     apt-get install -y nodejs && \
     echo "Node.js version: $(node -v)" && \
-    npm install npm@10.1.0 -g && \
+    npm install npm@latest -g && \
+    npm install --global corepack@latest && \
     echo "NPM version: $(npm -v)"
 
 #
